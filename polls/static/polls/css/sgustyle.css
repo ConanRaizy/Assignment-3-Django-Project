@@ -1,0 +1,111 @@
+/* GENERAL PAGE */
+body {
+    background: linear-gradient(to bottom, #87CEFA, #e6f7ff);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+/* HEADER IMAGE */
+.header-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 0 0 15px 15px;
+}
+
+/* TITLE */
+.national-text {
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+/* POLL LIST */
+.polls-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* POLL BUTTON */
+.poll-button {
+    display: block;
+    width: 60%;
+    max-width: 400px;
+    padding: 15px;
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.poll-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* CARD STYLE (DETAIL + RESULTS) */
+.main-card {
+    background: white;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* CHOICES */
+.choice-item {
+    margin: 10px 0;
+    text-align: left;
+}
+
+/* BUTTON */
+.submit-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #4a90e2;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #357abd;
+}
+
+/* RESULTS */
+.results-list {
+    list-style: none;
+    padding: 0;
+}
+
+.results-list li {
+    padding: 10px;
+    margin: 8px 0;
+    background: #f1f1f1;
+    border-radius: 8px;
+}
+
+/* BACK BUTTON */
+.back-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.back-btn:hover {
+    background: #555;
+}

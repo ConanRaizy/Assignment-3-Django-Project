@@ -1,25 +1,36 @@
-{% if latest_question_list %}
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Grenada</title>
-    <link rel="stylesheet" href="sgustyle.css">
+
+    <!-- Correct CSS link -->
+    <link rel="stylesheet" href="{% static 'polls/css/sgustyle.css' %}">
 </head>
+
 <body>
-<img src="NiceBackgroundByMapp.jpg" alt="Nice background" class="header-image">
+
+<!-- Fix image path -->
+<img src="{% static 'polls/images/NiceBackgroundByMapp.jpg' %}" class="header-image">
+
 <h1 class="national-text">Available Polls on Site</h1>
+
+{% if latest_question_list %}
 <div class="polls-container">
     {% for question in latest_question_list %}
-    <button><a href="{% url 'polls:detail' question.id %}" class="poll-button">{{ question.question_text }}</a></button>
+    <a href="{% url 'polls:detail' question.id %}" class="poll-button">
+        {{ question.question_text }}
+    </a>
     {% endfor %}
 </div>
-<script src="sguscript.js"></script>
-</body>
-</html>
-
 {% else %}
 <p>No polls are available.</p>
 {% endif %}
+
+<!-- Optional JS (also should use static) -->
+<script src="{% static 'js/sguscript.js' %}"></script>
+
+</body>
+</html>
