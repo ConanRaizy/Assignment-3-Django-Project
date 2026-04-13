@@ -24,6 +24,9 @@ pipeline {
                             python3 -m venv comp314
                             source comp314/bin/activate
                             pip install -r requirements.txt
+                            python3 manage.py migrate
+                            pkill -f "manage.py runserver" || true
+                            nohup python3 manage.py runserver 0.0.0.0:8000 > /tmp/django.log 2>&1 &
                         '
                         """
                     }
