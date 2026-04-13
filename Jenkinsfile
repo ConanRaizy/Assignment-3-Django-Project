@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         EC2_USER = "ubuntu"
-        EC2_HOST = "18.221.154.179"
+        EC2_HOST = "3.21.168.219"
         EC2_KEY = credentials('ec2-ssh-private-key')
         PROJECT_DIR = "/home/ubuntu/pythonprojects/Assignment-3-Django-Project"
     }
